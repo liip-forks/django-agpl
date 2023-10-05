@@ -16,18 +16,18 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-from django.conf.urls import url
+from django.urls import re_path
 
 from . import views
 
 
 urlpatterns = (
-    url(r'^tar$', views.tar,
+    re_path(r'^tar$', views.tar,
         name='download-tar'),
-    url(r'^zip$', views.zip,
+    re_path(r'^zip$', views.zip,
         name='download-zip'),
-    url(r'^targz$', views.targz,
+    re_path(r'^targz$', views.targz,
         name='download-targz'),
-    url(r'^tarbz2$', views.tarbz2,
+    re_path(r'^tarbz2$', views.tarbz2,
         name='download-tarbz2'),
 )
